@@ -1,0 +1,78 @@
+header {
+background: rgb(83, 81, 81);
+
+}
+
+/* This is to get header to come back in view after floating nav items*/
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+
+}
+
+.container {
+
+    width: 80%;
+    margin: auto;
+}
+
+.logo {
+max-height: 50px;  /* resize logo image */
+}
+
+body {
+    margin: 0;
+    background: whitesmoke;
+    font-family: sans-serif;
+
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0;
+    padding-right: 10px;
+    list-style: none; /*removes dots from ul items*/
+
+}
+
+nav li {
+    display: inline-block; /* moves list items side by side*/
+    margin-left: 60px; /* spreads list items to left */
+    padding-top: 15px;
+    padding-bottom: 15px; /* centered list items */
+    position: relative;
+   
+}
+
+nav a {
+    color: whitesmoke;
+    text-decoration: none;/*removes underline*/
+    text-transform: uppercase;
+}
+
+nav a:hover { 
+    color: whitesmoke;
+}
+
+nav a::before { /* adjust animation before click on nav*/
+     content: '';
+     display: block;
+     height: 2px;
+     background-color: whitesmoke ;
+
+     position: absolute;
+     top: 0;
+     width: 0%;
+
+    transition: all ease-in-out 250ms;
+
+}
+
+nav a:hover::before {
+    width: 100%;
+
+}
